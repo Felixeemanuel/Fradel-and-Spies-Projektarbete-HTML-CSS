@@ -1,0 +1,247 @@
+
+
+
+// HEADER 
+
+.rem {
+    margin-top: 4rem;
+    .circle {
+        margin: auto;
+        margin-top: 30px;
+        width: 240px;
+        height: 220px;
+        position: relative;
+        @include flex(center,center,center );
+    }
+    .blur {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        filter: blur(3rem);
+        background-color: $secondary-color;
+        display: flex;
+    }
+    img {
+        width: 170px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    h1 {
+        position: absolute;
+        z-index: 2;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 25px;
+        width: 85%;
+        color: white;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.437);
+        letter-spacing: 1px;
+        font-family: 'Prata', serif;
+        @media (min-width: 768px) {
+            font-size: 40px;
+        }
+    }
+    p {
+        color: $color;
+        padding-top: 3rem;
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        @include font(15, 100 ,italic );
+
+    }
+    .header-btn-wrapper {
+        @include flex(center,center ,center );
+        width: 100%;
+        margin-top: 25px;
+        .btn {
+            display: inline-block;
+            margin: 5px;
+            background-color: $secondary-color;
+            padding: 10px 40px;
+            @include font(15px,500,normal);
+            text-decoration: none;
+            text-shadow: $text-shadow;
+            @media (min-width: 768px) {
+                font-size: 20px;
+                padding: 12px 45px;
+            }
+        }
+        .stroke {
+            background-color: transparent;
+            border: 1px solid $secondary-color;
+            color: white;
+        }
+    }
+}
+
+
+main {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    width: 80%;
+    margin: auto;
+    .section1 {
+        display: flex;
+        position: relative;
+        @media (min-width: 850px) {
+            margin-top: 4rem;
+        }
+        img {
+            width: 60%;
+            position: absolute;
+            top: 60%;
+            transform: translateY(-60%);
+            right: 0;
+            z-index: -1;
+            filter: brightness(0.6);
+            @media (min-width: 850px) {
+                max-width: 55%;
+                
+            }
+        }
+        .section1-text {
+            color: $color;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.453);
+            h2 {
+                @include font(20px, 400 ,normal );
+                letter-spacing: 1px;
+                @media (min-width: 850px) {
+                    font-size: 30px;
+                }
+                    
+            }
+            h3 {
+                @include font(25px, 600 ,normal );
+                letter-spacing: 1px;
+                @media (min-width: 850px) {
+                    @include font (40px, 400, normal);
+                }
+            }
+            p {
+                font-size: 12px;
+            }
+            @media (min-width: 1000px) {
+                h2 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .section2 {
+        margin-top: 60px;
+        @include flex(center, space-around , row);
+        img {
+            width:30%;
+            filter: blur(0.1rem);
+            transform: rotate(180deg);
+            width: 40%;
+            
+        }
+        p {
+            color: $color;
+            font-style: italic;
+            opacity: .7;
+            @include font(15px, 100 ,normal );
+            text-align: end;
+            @media (min-width: 950px) {
+                font-size: 20px;
+                width: 80%;
+            }
+        }
+    }
+}
+
+.cards-wrapper {
+    @include flex(center, center, column );
+    flex-wrap: wrap;
+    @media (min-width: 769px) {
+        @include flex (center, center, row);
+        margin-top: 4.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        @include flex(center, space-between, column );
+        text-align: center;
+        width: 80%;
+        min-width: 290px;
+        max-width: 290px;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.356);
+        overflow: hidden;
+        @media (min-width: 625px) {
+            width: 70%;
+        }
+        @media (min-width: 768px) {
+            @include flex (center, space-between, column);
+            width: 60%;
+            margin: 10px 20px;
+        }
+        margin-top: 4rem;
+        height: 330px;
+        background-color: $secondary-color;
+        border-radius: 10px;
+       
+        .card-background-img {
+            background-image: url("/images/plant.jpg");
+            height: 47%;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            justify-self: flex-start;
+            position: relative;
+        }
+    }
+    h4 {
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+        color: $color;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.499);
+        @include font(20px,500,normal);
+        letter-spacing: 1px;
+    }
+    p {
+        width: 80%;
+        font-size: 15px;
+        color: $color;
+        opacity: .9;
+        text-shadow: $text-shadow;
+    }
+    .card-btn {
+        background-color: #D9D9D9;
+        padding: 10px 30px;
+        border-radius: 2px;
+        display: inline-block;
+        @include font(15px,500 ,normal );
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        color: black;
+        
+    }
+
+    .card2-background-img {
+        background-image: url("/images/rosteri.jpg");
+        height: 47%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        justify-self: flex-start;
+        position: relative;
+    }
+    .card3-background-img {
+        background-image: url("/images/barista_latte.jpg");
+        height: 47%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        justify-self: flex-start;
+        position: relative;
+    }
+}
+

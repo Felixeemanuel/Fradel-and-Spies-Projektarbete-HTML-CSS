@@ -1,0 +1,35 @@
+.referenser-wrapper { 
+    h1 {
+        @include font(45px, 600 ,normal);
+        display: inline-block;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 50px;
+        letter-spacing: 3px;
+        
+    }
+    @include flex(center, space-around ,row );
+    flex-wrap: wrap;
+    
+
+    .recension-box {
+        width: 40%;
+        margin: 10px;
+        font-style: italic;
+        h2 {
+            font-weight: 500;
+        }
+        p {
+            opacity: .7;
+            font-weight: 200;
+        }
+    }
+    .checked {
+        color: orange;
+    }
+}
+
+.page-active {
+    color: $secondary-color;
+}

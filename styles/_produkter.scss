@@ -1,0 +1,92 @@
+.produkter-wrapper {
+    h1 {
+        @include font(50px,500, normal);
+        letter-spacing: 3px;
+        @media (max-width: 768px) {
+            text-align: center;
+            @include flex(center, center , column );
+            
+        }
+    }
+    .product-cards-inner {
+        @include flex(center, space-between , row );
+        flex-wrap: wrap;
+        @media (max-width: 768px) {
+            @include flex(center, center , column );
+        }
+        .card {
+            max-width: 300px;
+            height: 450px;
+            background-color: $secondary-color;
+            margin: 25px 0px;
+            background-size: cover;
+            @include flex(center, space-between, column);
+            padding-bottom: 15px;
+            text-align: center;
+            border-radius: 10px;
+            text-shadow: $text-shadow;
+            overflow: hidden;
+            .product-card-img {
+                background-image: url("/images/coffeebag1.jpg");
+                height: 50%;
+                width: 100%;
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                
+                h3 {
+                    position: absolute;
+                    bottom: 0;
+                    color: $color;
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.437);
+                    backdrop-filter: brightness(0.3);
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .product-card2-img {
+                background-image: url("/images/coffeebag2.jpg");
+                height: 50%;
+                width: 100%;
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                h3 {
+                    position: absolute;
+                    bottom: 0;
+                    color: $color;
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.437);
+                    backdrop-filter: brightness(0.3);
+                    display: block;
+                    width: 100%;
+                }
+            }
+                .product-card3-img {
+                    background-image: url("/images/coffeebag3.jpg");
+                    height: 50%;
+                    width: 100%;
+                    background-size: cover;
+                    background-position: center;
+                    position: relative;
+                    h3 {
+                        position: absolute;
+                        bottom: 0;
+                        color: $color;
+                        text-shadow: 1px 1px 2px rgba(0, 0,0, 0.437);
+                        backdrop-filter: brightness(0.3);
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            button {
+                padding: 10px 40px;
+                color: black;
+                letter-spacing: 1px;
+                border: none;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 15px;
+            }
+        }
+    }
+}

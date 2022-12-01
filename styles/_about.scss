@@ -1,0 +1,122 @@
+.aboutus-wrapper {
+    text-align: center;
+    width: 65%;
+    h2 {
+        font-family: 'Prata', serif;
+        letter-spacing: 5px;
+        font-size: 45px;
+        text-align: center;
+    }
+    h3 {
+        font-weight: 300;
+        font-style: italic;
+        font-size: 15px;
+        opacity: .7;
+        margin-top: 20px ;
+    }
+    p {
+        padding-top: 40px;
+        text-align: start ;
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+        
+    }
+}
+.employee-wrapper {
+    width: 80%;
+    margin: auto;
+    @include flex(center, center ,row );
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    .employee-card {
+        background: $secondary-color;
+        min-width: 300px;
+        max-width: 300px;
+        height: 400px;
+        margin: auto;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        p {
+            margin: auto;
+            width: 80%;
+            text-align: end;
+            font-style: italic;
+            padding-top: 30px;
+            text-shadow: $text-shadow;
+        }
+    }
+    .employee-image, .employee-image2, .employee-image3, .employee-image4, .employee-image5 {
+        background-size: cover;
+        background-position: center;
+        height: 50%;
+        width: 100%;
+        position: relative;
+        h2 {
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.783);
+            position: absolute;
+            text-align: end;
+            padding-right: 10px;
+            backdrop-filter: brightness(0.3);
+            width: 100%;
+        }
+    }
+    .employee-image {
+        background-image: url("/images/worker1.jpg");
+    }
+    .employee-image2 {
+        background-image: url("/images/worker3.jpg");
+    }
+    .employee-image3 {
+        background-image: url("/images/worker4.jpg");
+    }
+    .employee-image4 {
+        background-image: url("/images/worker5.jpg");
+    }
+    .employee-image5 {
+        background-image: url("/images/worker6.jpg");
+    }
+    .employee-card:nth-of-type(2) {
+        padding-bottom: 35px;
+
+    }
+    border-bottom:1px solid $secondary-color;
+}
+
+.find-us {
+    background-color: $secondary-color;
+    width: 500px;
+    max-width: 100%;
+    height: 700px;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    @media  (min-width: 500px) {
+        margin-bottom: 50px;
+    }
+    .about-us-image {
+        background-image: url("/images/building.jpg");
+        height: 70%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+
+    }
+    h4 {
+        @include font (20px, 400, normal);
+        text-align: center;
+        margin-top: 20px;
+        text-decoration: overline;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.284);
+    }
+    p {
+        text-align: center;
+        padding-top: 15px;
+        text-shadow: $text-shadow;
+    }
+    p:last-child {
+        text-decoration: underline;
+    }
+}
